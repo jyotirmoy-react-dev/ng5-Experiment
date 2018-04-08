@@ -1,0 +1,11 @@
+<div>
+  <form (ngSubmit)="saveData()" #form1>
+    <label for="fisrtname">First Name</label>
+     <input type="text" required [(ngModel)]="usermodel.firstname" id="firstname" name="firstname" #firstname="ngModel" required/>
+     <span [hidden]="firstname.valid || firstname.prestine" >Fist Name Needed</span>
+     <label for="lastname">Last Name</label>
+     <input type="text" required [(ngModel)]="usermodel.lastname" id="lastname" name="lastname" #lastname="ngModel" required/>
+     <span [hidden]="lastname.valid || lastname.prestine" >Fist Name Needed</span>
+     <input type="submit" value="Save Data">
+  </form>
+</div>
